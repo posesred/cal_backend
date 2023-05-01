@@ -69,17 +69,6 @@ files = [
 ]
 
 [[package]]
-name = "django-mixins"
-version = "0.0.10"
-description = "Useful mixins for Django class based views"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "django-mixins-0.0.10.tar.gz", hash = "sha256:6df2d8bb3f5663d2fc18dce14dc05bf5270b099c17e7656e6f222ac79131f3de"},
-]
-
-[[package]]
 name = "fastapi"
 version = "0.95.1"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
@@ -308,18 +297,6 @@ files = [
     {file = "MarkupSafe-2.1.2-cp39-cp39-win32.whl", hash = "sha256:137678c63c977754abe9086a3ec011e8fd985ab90631145dfb9294ad09c102a7"},
     {file = "MarkupSafe-2.1.2-cp39-cp39-win_amd64.whl", hash = "sha256:0576fe974b40a400449768941d5d0858cc624e3249dfd1e0c33674e5c7ca7aed"},
     {file = "MarkupSafe-2.1.2.tar.gz", hash = "sha256:abcabc8c2b26036d62d4c746381a6f7cf60aafcc653198ad678306986b09450d"},
-]
-
-[[package]]
-name = "mixins"
-version = "0.1.4"
-description = "Mixin classes which may be added to your own classes to add certain functionality to them."
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "mixins-0.1.4-py3-none-any.whl", hash = "sha256:643498dc8fc8b356c5f9f0246ef000a423339c6f2727eb8332055171495301ba"},
-    {file = "mixins-0.1.4.tar.gz", hash = "sha256:4a6618473a3ac0295004c736a1180ed024041cec567bc1852f6e133dae80e0d4"},
 ]
 
 [[package]]
@@ -648,4 +625,4 @@ standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)",
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "f0f17ca95325ce8b30faa41fb11cbe55474c0c622a343856655489e9d3bec894"
+content-hash = "45619d41c37e0058a0a9500ba7cc70899b1debf7107d7ae7af9eea2dee508b23"

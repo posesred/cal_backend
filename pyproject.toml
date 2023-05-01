@@ -1,24 +1,23 @@
 [tool.poetry]
-name = "fastapiproject"
+name = "cal-backend"
 version = "0.1.0"
 description = ""
-authors = ["sanat <you@exampl.com>"]
+authors = ["Sanatjon"]
 readme = "README.md"
+packages = [{include = "cal_backend"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-fastapi = "^0.95.1"
-uvicorn = "^0.22.0"
 python-dotenv = "^1.0.0"
-alembic = "^1.10.4"
 sqlalchemy = "^2.0.12"
-mixins = "^0.1.4"
 sqlalchemy-mixins = "^2.0.0"
+fastapi = "^0.95.1"
 fastapi-sqlalchemy = "^0.2.1"
 pytz = "^2023.3"
-django-mixins = "^0.0.10"
 fastapi-camelcase = "^1.0.5"
+alembic = "^1.10.4"
 psycopg2-binary = "^2.9.6"
+uvicorn = "^0.22.0"
 
 
 [build-system]

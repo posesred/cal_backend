@@ -1,23 +1,16 @@
 """
 author: Sanatjon Burkhanov
 github: posesred
-this sets up a fastapi module and sets up a basic configuration for logging
 """
 import logging
+from sqlalchemy_mixins.session import SessionMixin
 from fastapi import FastAPI
-from fastapi_sqlalchemy import DBSessionMiddleware, db
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi_sqlalchemy.middleware import DBSession, db, DBSessionMiddleware
 
-from setting import Config
-from shared.base.base_model import ModelMixin
+from app.shared.bases.base_model import ModelMixin
+from settings import Config
 
 app = FastAPI()
-origins = [
-    'http://localhost:3000',
-    'http://localhost',
-    'http://127.0.0.1',
-    'http://127.0.0,1:3000'
-]
 
 logging.basicConfig(
     filename='app.log',
@@ -25,14 +18,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger('app')
 
-app.add_middleware(DBSessionMiddleware, db_url=f'postgresql+psycopg2://{Config.postgress_connection}')
-
 app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    DBSessionMiddleware,
+    db_url=f"postgresql+psycopg2://{Config.postgres_connection}",
+    engine_args={"pool_size": 100000, "max_overflow": 10000},
 )
-
-
