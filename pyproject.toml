@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "cal-backend"
+version = "0.1.0"
+description = ""
+authors = ["Sanatjon"]
+readme = "README.md"
+packages = [{include = "cal_backend"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.0"
+sqlalchemy = "^2.0.12"
+sqlalchemy-mixins = "^2.0.0"
+fastapi = "^0.95.1"
+fastapi-sqlalchemy = "^0.2.1"
+pytz = "^2023.3"
+fastapi-camelcase = "^1.0.5"
+alembic = "^1.10.4"
+psycopg2-binary = "^2.9.6"
+uvicorn = "^0.22.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
