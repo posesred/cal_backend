@@ -24,9 +24,8 @@ def get_operation(context: GetCalculatorOperation):
     """
     OperationHistory.set_session(db.session)
     exec_string = f'{context.left_number} {context.operation} {context.right_number}'
-    if context.operation == '/':
-        if context.right_number == 0:
-            return GetCalculatorOperationResponse(error="Can not divide by zero twat")
+    if context.operation == '/' and context.right_number == 0:
+        return GetCalculatorOperationResponse(error="Can not divide by zero twat")
     result = eval(exec_string)
 
     operation = OperationHistory.create(**context.dict(), result=result, execution_string=exec_string)
