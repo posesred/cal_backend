@@ -1,17 +1,19 @@
 """
-author: Sanatjon Burkhanov
-github: posesred
+Author: Sanatjon Burkhanov
+gitHub: posesred
 this sets up a fastapi module and sets up a basic configuration for logging
 """
 import logging
 from fastapi import FastAPI
 from fastapi_sqlalchemy import DBSessionMiddleware, db
 from fastapi.middleware.cors import CORSMiddleware
-
+from fastapi.staticfiles import StaticFiles
 from setting import Config
 from shared.base.base_model import ModelMixin
 
+
 app = FastAPI()
+app.mount("/static", StaticFiles(directory="static"), name="static")
 origins = [
     'http://localhost:3000',
     'http://localhost',

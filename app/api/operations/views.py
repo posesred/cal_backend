@@ -13,7 +13,6 @@ router = APIRouter(
     prefix='/api/operation',
     tags=['operation']
 )
-#ye
 
 @router.post('/get/operation', response_model=GetCalculatorOperationResponse)
 def get_operation(context: GetCalculatorOperation):

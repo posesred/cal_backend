@@ -1,5 +1,5 @@
 import uvicorn as uvicorn
-
+from fastapi import FastAPI
 from app.endpoints.routes import add_new_route
 app = add_new_route()
 
